@@ -1,0 +1,51 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 29
+    buildToolsVersion "29.0.3"
+
+    defaultConfig {
+        applicationId "edu.cnm.deepdive.myfunrunandroid"
+        minSdkVersion 26
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0"
+        // TODO if using Room add Java compile options for schema location.
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility = 1.8
+        targetCompatibility = 1.8
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    // TODO Add dependencies for lifecycle and viewmodel extensions.
+    // TODO If applicable, add dependencies for nav framework.
+    // TODO Add dependencies for material design.
+    // TODO Add Google Play services for authentication.
+    // TODO RxJava2 dependencies.
+    // TODO If consuming JSON based webservice, add Gson dependency.
+    // TODO If consuming a webservice of any type, add Retrofit
+    // TODO If using local database, add Room dependencies.
+    // TODO Add Stetho dependency.
+    // TODO If loading images over the web add Picasso dependency.
+    // TODO If doing any kind of database preload on local system- app appropriate deserializer.
+    // TODO For licensing - Google Play services OSS License dependency.
+
+    testImplementation 'junit:junit:4.13'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+}
